@@ -16,7 +16,12 @@ export default {
   },
   data() {
     return {
-      loadedPosts: [
+      loadedPosts: []
+    };
+  },
+  created() {
+    setTimeout(() => {
+      this.loadedPosts = [
         {
           id: "1",
           title: "First Post",
@@ -31,8 +36,8 @@ export default {
           thumbnail:
             "https://res.cloudinary.com/people-matters/image/upload/q_auto,f_auto/v1578710070/1578710068.jpg"
         }
-      ]
-    };
+      ];
+    }, 1500);
   }
 };
 </script>
