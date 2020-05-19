@@ -4,8 +4,8 @@
       <h1>Get the latest tech news.</h1>
     </section>
     <div class="featured-posts">
-      <nuxt-link :to="'/posts/' + 1">
-        <article class="post-preview">
+      <nuxt-link :to="'/posts/' + 1" class="post-preview">
+        <article>
           <div
             class="post-thumbnail"
             style="background-image: url('https://www.angelpunk.co/wp-content/uploads/MzI4MDQ2Mg.jpeg')"
@@ -16,8 +16,8 @@
           </div>
         </article>
       </nuxt-link>
-      <nuxt-link :to="'/posts/' + 2">
-        <article class="post-preview">
+      <nuxt-link :to="'/posts/' + 2" class="post-preview">
+        <article>
           <div
             class="post-thumbnail"
             style="background-image: url('https://res.cloudinary.com/people-matters/image/upload/q_auto,f_auto/v1578710070/1578710068.jpg')"
