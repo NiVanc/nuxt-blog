@@ -4,35 +4,36 @@
       <h1>Get the latest tech news.</h1>
     </section>
     <div class="featured-posts">
-      <nuxt-link :to="'/posts/' + 1" class="post-preview">
-        <article>
-          <div
-            class="post-thumbnail"
-            style="background-image: url('https://www.angelpunk.co/wp-content/uploads/MzI4MDQ2Mg.jpeg')"
-          ></div>
-          <div class="post-content">
-            <h1>Post Title</h1>
-            <p>Preview text</p>
-          </div>
-        </article>
-      </nuxt-link>
-      <nuxt-link :to="'/posts/' + 2" class="post-preview">
-        <article>
-          <div
-            class="post-thumbnail"
-            style="background-image: url('https://res.cloudinary.com/people-matters/image/upload/q_auto,f_auto/v1578710070/1578710068.jpg')"
-          ></div>
-          <div class="post-content">
-            <h1>Post Title 2</h1>
-            <p>Preview text 2</p>
-          </div>
-        </article>
-      </nuxt-link>
+      <PostPreview
+        id="1"
+        thumbnail="https://res.cloudinary.com/people-matters/image/upload/q_auto,f_auto/v1578710070/1578710068.jpg"
+        title="Hello there!"
+        previewText="Don't hesitate. Click to read more."
+      />
+      <PostPreview
+        id="2"
+        thumbnail="https://www.angelpunk.co/wp-content/uploads/MzI4MDQ2Mg.jpeg"
+        title="More exciting news!"
+        previewText="I know you're tempted. Just click to read more."
+      />
+      <PostPreview
+        id="3"
+        thumbnail="https://lh3.googleusercontent.com/proxy/_nhMHrzRvqRsZ_ku43iueQ9fxeT18gSIYVQQSsyO7CzYsDLB41SPdvZ7eEGAtO5E9Pq9HyJjJnbf0LscYxXZxQAYJv4Bib_74tIpCz7Ub1M9LfpW4HmE7pGwIKu4SPsDwqzTAW4I5YR4LElsPwpxs5Ijow"
+        title="Clickbait title"
+        previewText="You must click this one for sure."
+      />
     </div>
   </div>
 </template>
 
 <script>
+import PostPreview from "~/components/posts/PostPreview";
+
+export default {
+  components: {
+    PostPreview
+  }
+};
 </script>
 
 <style scoped>
@@ -73,41 +74,5 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-}
-
-.post-preview {
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 2px #ccc;
-  background-color: white;
-  width: 90%;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-@media (min-width: 850px) {
-  .post-preview {
-    width: 400px;
-    margin: 10px;
-  }
-}
-
-.post-thumbnail {
-  width: 100%;
-  height: 200px;
-  background-position: center;
-  background-size: cover;
-}
-
-.post-content {
-  padding: 10px;
-  text-align: center;
-}
-
-a:hover .post-content,
-a:active .post-content {
-  background-color: #ccc;
 }
 </style>
